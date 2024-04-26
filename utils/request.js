@@ -26,7 +26,9 @@ const request = (url, method = 'GET', params = {}, needToken = false, header = n
         duration: 2000
       })
 
-      return
+      return new Promise((resolve, reject) => {
+				return reject({ message: "没有权限访问" });
+			});
     }
   }
 
